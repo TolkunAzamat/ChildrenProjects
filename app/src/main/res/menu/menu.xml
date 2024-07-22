@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/familyFragment"
+    android:icon="@drawable/card"
+    android:title="Транзакциялар"
+    android:enabled="true"/>
+    <item
+        android:id="@+id/bankFragment"
+        android:icon="@drawable/cash"
+        android:title="Капчык"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/noteFragment"
+        android:icon="@drawable/transactions"
+        android:title="Эскертүүлөр"
+        android:enabled="true"/>
+
+</menu>

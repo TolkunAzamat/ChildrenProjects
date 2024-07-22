@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/addTrasactionFragment">
+
+    <fragment
+        android:id="@+id/addTrasactionFragment"
+        android:name="com.example.childrenprojects.db.fragments.AddTrasactionFragment"
+        android:label="fragment_add_trasaction"
+        tools:layout="@layout/fragment_add_trasaction" />
+    <fragment
+        android:id="@+id/bankFragment"
+        android:name="com.example.childrenprojects.db.fragments.BankFragment"
+        android:label="fragment_bank"
+        tools:layout="@layout/fragment_bank" >
+        <action
+            android:id="@+id/action_bankFragment_to_addTrasactionFragment"
+            app:destination="@id/addTrasactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/familyFragment"
+        android:name="com.example.childrenprojects.db.fragments.FamilyFragment"
+        android:label="fragment_family"
+        tools:layout="@layout/fragment_family" />
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.example.childrenprojects.db.fragments.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" />
+</navigation>

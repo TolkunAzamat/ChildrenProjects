@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".db.fragments.BankFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/editTextCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Номер карты" />
+            <EditText
+                android:id="@+id/editTextExpirationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Срок действия (MM/YY)" />
+            <Button
+                android:id="@+id/buttonAddCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить карту"
+                />
+            <TextView
+                android:id="@+id/textViewCardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Номер карты:" />
+            <TextView
+                android:id="@+id/textViewExpirationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Срок действия:" />
+            <TextView
+                android:id="@+id/textViewBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Баланс:" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/showTransactions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Показать транзакции"/>
+                <Button
+                    android:id="@+id/addTransactions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Добавить транзакции"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:layout_marginTop="10dp"
+                    android:text="Сумма:"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Кто:"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Дата:"
+                    android:layout_marginTop="10dp"
+                    />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_transaction"
+
+
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
